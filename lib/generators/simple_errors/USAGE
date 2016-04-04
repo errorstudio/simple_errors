@@ -1,0 +1,10 @@
+Description:
+    Install SimpleErrors views and ApplicationController mixin in your Rails app
+
+Example:
+    rails generate simple_errors
+
+    This will create:
+        views/layouts/error.html.erb
+        views/errors/404.html.erb
+        views/errors/500.erb
