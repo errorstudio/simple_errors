@@ -20,7 +20,7 @@ module SimpleErrors
 
         # If rollbar is defined, send a message to it.
         if defined?(Rollbar)
-          Rollbar.error(e, rollbar_request_data, rollbar_person_data)
+          Rollbar.error(e, rollbar_request_data, rollbar_person_data, :use_exception_level_filters => true)
         end
 
       end
