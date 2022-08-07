@@ -23,6 +23,11 @@ module SimpleErrors
           Rollbar.error(e, rollbar_request_data, rollbar_person_data, :use_exception_level_filters => true)
         end
 
+        # If Honeybadger is defined, send a message to it.
+        if defined?(Honeybadger)
+          Honeybadger.notify(e)
+        end
+
       end
     end
 
